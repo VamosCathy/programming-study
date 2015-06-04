@@ -1,3 +1,5 @@
+/*举一反三：链表翻转
+*/
 #include <stdio.h>
 #include <stdlib.h> //malloc()
 typedef struct LNode
