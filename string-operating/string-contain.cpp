@@ -3,6 +3,18 @@
 #include <algorithm>
 using namespace std;
 
+bool stringContain_bit(string &a,string &b){
+/*位运算*/
+    int hash = 0;
+    for (int i = 0; i < a.length();++i)
+        hash |= (1 << (a[i] - 'A'));
+    for (int i = 0; i < b.length();++i){
+        if((hash & (1 << (b[i] - 'A')) == 0)
+            return false;
+    }
+    return true;
+}
+
 bool stringContain_sort(string &a,string &b){
 /*字符串包含——普通排序法
 时间复杂度：排序：O(mlogm + nlogn)
